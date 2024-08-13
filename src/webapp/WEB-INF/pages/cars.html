@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+    <p th:text="'list of cars'"/>
+    <div th:each="car : ${cars}">
+        <p th:text="'model: ' + ${car.model} + ' speed = ' + ${car.speed} + ' horse power = ' + ${car.horsePower}" />
+    </div>
+</body>
+</html>
