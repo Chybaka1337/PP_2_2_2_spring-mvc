@@ -14,12 +14,10 @@ public class CarServiceIml implements CarService {
 
     @Override
     public List<Car> getCars(int count) {
-        if (count >= 5) {
-            return carDao.getAll();
-        } else if (count >= 0) {
+        if (count > 0 && count < 5) {
             return carDao.getPart(count);
         } else {
-            return new ArrayList<>();
+            return carDao.getAll();
         }
     }
 }
